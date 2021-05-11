@@ -11,6 +11,11 @@ package com.mycompany.petadoption;
  */
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello World");
+        String dbName = "pet.db";
+        DatabaseUtil.connect(dbName);
+        
+        // SQL -> If table does not exist create it
+        
+        // Call console interface function with option to view all pets, view pets of certain species, edit pet, delete pet
     }
 }
