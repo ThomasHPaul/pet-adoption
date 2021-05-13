@@ -1,0 +1,10 @@
+CREATE TABLE IF NOT EXISTS pet (
+    PetID INTEGER PRIMARY KEY,
+    Name TEXT NOT NULL,
+    Species TEXT NOT NULL,
+    Breed TEXT,
+    Age INTEGER,
+    Fixed INTEGER DEFAULT 0,
+    Microchipped INTEGER DEFAULT 0,
+    Description TEXT
+)

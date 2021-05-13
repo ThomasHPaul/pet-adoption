@@ -12,9 +12,13 @@ package com.mycompany.petadoption;
 public class Main {
     public static void main(String[] args) {
         String dbName = "pet.db";
-        DatabaseUtil.connect(dbName);
+        
+        // Read SQL create table from file
+        String schemaSQLPath = ".\\src\\main\\java\\com\\mycompany\\petadoption\\schema.txt";
+        String schemaSQL = DatabaseUtil.loadSqlFromTxtFile(schemaSQLPath);
         
         // SQL -> If table does not exist create it
+        DatabaseUtil.buildTable(dbName, schemaSQL);
         
         // Call console interface function with option to view all pets, view pets of certain species, edit pet, delete pet
     }
